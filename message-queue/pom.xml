@@ -4,12 +4,12 @@
 
 	<parent>
 		<groupId>com.hua</groupId>
-		<artifactId>message-queue-entire</artifactId>
+		<artifactId>message-entire</artifactId>
 		<version>0.0.1</version>
 	</parent>	
-	<artifactId>message-queue</artifactId>
+	<artifactId>message</artifactId>
 	<packaging>jar</packaging>
-	<name>message-queue</name>
+	<name>message</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		

@@ -7,30 +7,24 @@
 		<artifactId>message-entire</artifactId>
 		<version>0.0.1</version>
 	</parent>	
-	<artifactId>rabbitmq</artifactId>
+	<artifactId>message-template</artifactId>
 	<packaging>jar</packaging>
-	<name>rabbitmq</name>
+	<name>message-template</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		
 		<message.version>0.0.1</message.version>
-		<rabbitmq.version>5.2.0</rabbitmq.version>		
 	</properties>
 
 	<dependencies>
-
+		
 		<dependency>
 			<groupId>com.hua</groupId>
 			<artifactId>message</artifactId>
 			<version>${message.version}</version>
 		</dependency>		
-	
-		<dependency>
-		    <groupId>com.rabbitmq</groupId>
-		    <artifactId>amqp-client</artifactId>
-		    <version>${rabbitmq.version}</version>
-		</dependency>		
-
+		
+		
 	</dependencies>
 
 </project>
