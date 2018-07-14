@@ -3,14 +3,14 @@
  * @author  qye.zheng
  * 	version 1.0
  */
-package template.code;
+package com.hua.util;
 
 /**
  * KafkaUtil
  * 描述: 
  * @author  qye.zheng
  */
-public final class TemplateUtil
+public final class KafkaUtil
 {
 
 	/**
@@ -18,7 +18,7 @@ public final class TemplateUtil
 	 * 描述: 
 	 * @author  qye.zheng
 	 */
-	private TemplateUtil()
+	private KafkaUtil()
 	{
 	}
 
