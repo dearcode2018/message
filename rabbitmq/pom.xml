@@ -13,7 +13,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		
-		<message.version>0.0.1</message.version>
+		<message.core.version>0.0.1</message.core.version>
 		<rabbitmq.version>5.2.0</rabbitmq.version>		
 	</properties>
 
@@ -21,8 +21,8 @@
 
 		<dependency>
 			<groupId>com.hua</groupId>
-			<artifactId>message</artifactId>
-			<version>${message.version}</version>
+			<artifactId>message-core</artifactId>
+			<version>${message.core.version}</version>
 		</dependency>		
 	
 		<dependency>

@@ -7,9 +7,9 @@
 		<artifactId>message-entire</artifactId>
 		<version>0.0.1</version>
 	</parent>	
-	<artifactId>message</artifactId>
+	<artifactId>message-core</artifactId>
 	<packaging>jar</packaging>
-	<name>message</name>
+	<name>message-core</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		
