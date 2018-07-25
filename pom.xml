@@ -18,7 +18,8 @@
 		<module>message-core</module>		
 		<module>rabbitmq</module>		
 		<module>rabbitmq-spring</module>		
-		
+		<module>rocketmq</module>
+		<module>rocketmq-spring</module>
 	</modules>
  
 	<!-- 公共属性 -->
