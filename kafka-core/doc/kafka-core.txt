@@ -37,7 +37,9 @@ bin\windows\kafka-console-producer.bat --broker-list 127.0.0.1:2181 --topic [top
 
 2.
 
-
+四、应用场景
+1.主题
+无需提前创建，事先约定好主题即可实现发布和接收.
 
 
 
