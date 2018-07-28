@@ -14,7 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		
 		<message.core.version>0.0.1</message.core.version>
-		<rocketmq.version>3.6.2.Final</rocketmq.version>
+		<rocketmq.version>4.2.0</rocketmq.version>
 	</properties>
 
 	<dependencies>
@@ -26,13 +26,7 @@
 		</dependency>		
 
 		<dependency>
-		    <groupId>com.alibaba.rocketmq</groupId>
-		    <artifactId>rocketmq-common</artifactId>
-		    <version>${rocketmq.version}</version>
-		</dependency>
-		
-		<dependency>
-		    <groupId>com.alibaba.rocketmq</groupId>
+		    <groupId>org.apache.rocketmq</groupId>
 		    <artifactId>rocketmq-client</artifactId>
 		    <version>${rocketmq.version}</version>
 		</dependency>

@@ -7,29 +7,21 @@
 		<artifactId>message-entire</artifactId>
 		<version>0.0.1</version>
 	</parent>	
-	<artifactId>rocketmq-spring</artifactId>
+	<artifactId>activemq-spring</artifactId>
 	<packaging>jar</packaging>
-	<name>rocketmq-spring</name>
+	<name>activemq-spring</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		
-		<rocketmq.version>0.0.1</rocketmq.version>
+		<com.hua.activemq.version>0.0.1</com.hua.activemq.version>
 	</properties>
 
 	<dependencies>
-		
-		<dependency>
-			<groupId>com.hua</groupId>
-			<artifactId>rocketmq</artifactId>
-			<version>${rocketmq.version}</version>
-		</dependency>		
-		
-		<dependency>
-		    <groupId>org.apache.activemq</groupId>
-		    <artifactId>activemq-spring</artifactId>
-		    <version>${activemq.version}</version>
-		</dependency>
 
+	<dependency>
+			<groupId>com.hua</groupId>
+			<artifactId>activemq</artifactId>
+			<version>${com.hua.activemq.version}</version>
+		</dependency>
 		
 	</dependencies>
 

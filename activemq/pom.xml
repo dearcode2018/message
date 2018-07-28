@@ -14,7 +14,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		
 		<message.core.version>0.0.1</message.core.version>
-		<activemq.version>5.7.0</activemq.version>
 	</properties>
 
 	<dependencies>
@@ -26,7 +25,7 @@
 
 	<dependency>
 			<groupId>org.apache.activemq</groupId>
-			<artifactId>activemq-core</artifactId>
+ 			<artifactId>activemq-client</artifactId>
 			<version>${activemq.version}</version>
 		</dependency>
 		

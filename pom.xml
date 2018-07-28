@@ -13,6 +13,7 @@
 		<module>message-template</module>
 		<module>activemq</module>		
 		<module>activemq5</module>		
+		<module>activemq-spring</module>
 		<module>kafka-core</module>
 		<module>kafka-spring</module>
 		<module>message-core</module>		
@@ -34,6 +35,7 @@
 		<maven.plugin.resources.version>2.7</maven.plugin.resources.version>
 		<maven.plugin.dependency.version>2.10</maven.plugin.dependency.version>
 		<maven.plugin.war.version>3.0</maven.plugin.war.version>
+		<activemq.version>5.15.4</activemq.version>		
 	</properties>  
   
   
