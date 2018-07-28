@@ -23,7 +23,7 @@ import static org.junit.Assert.fail;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import com.hua.mq.Publisher;
+import com.hua.message.Publisher;
 import com.hua.test.BaseTest;
 
 
@@ -53,19 +53,10 @@ public final class PublisherTest extends BaseTest {
 	@Test
 	public void testPublisher() {
 		try {
-			Publisher publisher = new Publisher();  
-			String[] args = {"zheng"};
-	        while (total < 1000) {  
-	            for (int i = 0; i < count; i++) {  
-	                publisher.sendMessage(args);  
-	            }  
-	            total += count;  
-	            System.out.println("Published '" + count + "' of '" + total + "' price messages");  
-	            try {  
-	              Thread.sleep(1000);  
-	            } catch (InterruptedException x) {  
-	            }  
-	        }  
+			Publisher publisher = new Publisher(QUEUE_NAME);  
+			
+			publisher.send("hi, i am message producer. 哈哈");
+			
 	        publisher.close();  
 			
 		} catch (Exception e) {

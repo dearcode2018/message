@@ -1,11 +1,11 @@
 /**
  * 描述: 
- * ConsumerTest.java
+ * SpringJunitTest.java
  * 
  * @author qye.zheng
  *  version 1.0
  */
-package com.hua.test.jms;
+package template.code;
 
 // 静态导入
 import static org.junit.Assert.assertArrayEquals;
@@ -22,9 +22,10 @@ import static org.junit.Assert.fail;
 
 import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.hua.message.ActiveMessageListener;
-import com.hua.message.Consumer;
 import com.hua.test.BaseTest;
 
 
@@ -32,13 +33,27 @@ import com.hua.test.BaseTest;
  * 描述: 
  * 
  * @author qye.zheng
- * ConsumerTest
+ * SpringJunitTest
  */
-public final class ConsumerTest extends BaseTest {
+/*
+ * 
+ * @SpringJUnit4ClassRunner 运行器负责拉起 spring 环境
+ * @ContextConfiguration 指定 spring配置文件，若不指定，则使用默认配置.
+ */
+// for Junit 4.x
+@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(locations = {"classpath:conf/xml/applicationContext.xml"})
+@ContextConfiguration(locations = {"", ""})
+public final class SpringJunitTest extends BaseTest {
 
 	/**
-	 * 先启动 ConsumerTest.testConsumer
-	 * 再启动 PublisherTest.testPublisher
+	 * 引当前项目用其他项目之后，然后可以使用
+	 * SpringJunitTest模板测试的其他项目
+	 * 
+	 * 可以使用所引用目标项目的所有资源
+	 * 若引用的项目的配置与本地的冲突或无法生效，需要
+	 * 将目标项目的配置复制到当前项目同一路径下
+	 * 
 	 */
 	
 	/**
@@ -48,13 +63,12 @@ public final class ConsumerTest extends BaseTest {
 	 * 
 	 */
 	@Test
-	public void testConsumer() {
+	public void testSpringJunit() {
 		try {
-		       Consumer consumer = new Consumer(QUEUE_NAME, new ActiveMessageListener());  
-		       Thread.sleep(10 * 1000);
-		       consumer.close();
+			
+			
 		} catch (Exception e) {
-			log.error("testConsumer =====> ", e);
+			log.error("testSpringJunit =====> ", e);
 		}
 	}
 	

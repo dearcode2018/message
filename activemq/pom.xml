@@ -23,7 +23,7 @@
 			<version>${message.core.version}</version>
 		</dependency>
 
-	<dependency>
+		<dependency>
 			<groupId>org.apache.activemq</groupId>
  			<artifactId>activemq-client</artifactId>
 			<version>${activemq.version}</version>

@@ -14,7 +14,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		
 		<kafka.core.version>0.0.1</kafka.core.version>
-		<spring.version>5.0.7.RELEASE</spring.version>				
 		<spring.kafka.verion>2.1.7.RELEASE</spring.kafka.verion>
 	</properties>
 

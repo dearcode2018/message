@@ -36,6 +36,8 @@
 		<maven.plugin.dependency.version>2.10</maven.plugin.dependency.version>
 		<maven.plugin.war.version>3.0</maven.plugin.war.version>
 		<activemq.version>5.15.4</activemq.version>		
+		<spring.version>5.0.8.RELEASE</spring.version>
+		<javax.jms.version>2.0.1</javax.jms.version>				
 	</properties>  
   
   
@@ -139,5 +141,16 @@
 
 		</plugins>
 	</build>
+
+	<dependencies>
+	
+		<!-- jms -->
+		<dependency>
+		    <groupId>javax.jms</groupId>
+		    <artifactId>javax.jms-api</artifactId>
+		    <version>${javax.jms.version}</version>
+		</dependency>	
+			
+	</dependencies>
 	
 </project>

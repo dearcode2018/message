@@ -18,6 +18,7 @@ import javax.jms.Message;
 import javax.jms.MessageProducer;
 import javax.jms.Session;
 
+import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.command.ActiveMQMapMessage;
 
@@ -52,6 +53,7 @@ public class Publisher
 		factory = new ActiveMQConnectionFactory(brokerUrl);
 		try
 		{
+			//String a = ActiveMQConnection.DEFAULT_BROKER_URL;
 			connection = factory.createConnection();
 			connection.start();
 			session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);

@@ -22,6 +22,12 @@
 			<artifactId>activemq</artifactId>
 			<version>${com.hua.activemq.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+ 			<artifactId>activemq-client</artifactId>
+			<version>${activemq.version}</version>
+		</dependency>
 		
 	</dependencies>
 
