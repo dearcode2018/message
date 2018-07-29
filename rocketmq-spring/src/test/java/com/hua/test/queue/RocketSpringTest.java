@@ -20,12 +20,16 @@ import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import javax.annotation.Resource;
+
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.hua.message.MessageConsumer;
+import com.hua.message.MessageProducer;
 import com.hua.test.BaseTest;
 
 
@@ -43,7 +47,9 @@ import com.hua.test.BaseTest;
 // for Junit 4.x
 @RunWith(SpringJUnit4ClassRunner.class)
 //@ContextConfiguration(locations = {"classpath:conf/xml/applicationContext.xml"})
-@ContextConfiguration(locations = {"", ""})
+@ContextConfiguration(locations = {"classpath:conf/xml/spring-config.xml", 
+		"classpath:conf/xml/spring-service.xml", 
+		"classpath:conf/xml/spring-rocketmq.xml"})
 public final class RocketSpringTest extends BaseTest {
 
 	/**
@@ -55,6 +61,38 @@ public final class RocketSpringTest extends BaseTest {
 	 * 将目标项目的配置复制到当前项目同一路径下
 	 * 
 	 */
+	@Resource
+	private MessageConsumer consumer;
+	
+	@Resource
+	private MessageProducer producer;
+	
+	
+	/**
+	 * 
+	 * 描述: 
+	 * @author qye.zheng
+	 * 
+	 */
+	@Test
+	public void testRocketSpring() {
+		try {
+			
+			consumer.init();
+			producer.init();
+			
+			// 发送消息
+			producer.send("嗨，我是生产者，rocket spring.");
+			
+			producer.send("嗨，我是生产者，rocket spring.2");
+			
+			// 避免主线程结束
+			Thread.sleep(20 * 1000);
+			
+		} catch (Exception e) {
+			log.error("testRocketSpring =====> ", e);
+		}
+	}
 	
 	/**
 	 * 
