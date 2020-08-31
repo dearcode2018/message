@@ -5,7 +5,7 @@
  * @author qye.zheng
  *  version 1.0
  */
-package com.hua.test.jms;
+package com.hua.test.message;
 
 // 静态导入
 import static org.junit.Assert.assertArrayEquals;

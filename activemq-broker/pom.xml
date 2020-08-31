@@ -7,26 +7,34 @@
 		<artifactId>message-entire</artifactId>
 		<version>0.0.1</version>
 	</parent>	
-	<artifactId>kafka-core</artifactId>
+	<artifactId>activemq-broker</artifactId>
 	<packaging>jar</packaging>
-	<name>kafka-core</name>
+	<name>activemq-broker</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<message.core.version>0.0.1</message.core.version>
+		<com.hua.activemq.version>0.0.1</com.hua.activemq.version>
 	</properties>
 
 	<dependencies>
-		
-		<dependency>
+
+	<dependency>
 			<groupId>com.hua</groupId>
-			<artifactId>message-core</artifactId>
-			<version>${message.core.version}</version>
-		</dependency>		
+			<artifactId>activemq</artifactId>
+			<version>${com.hua.activemq.version}</version>
+		</dependency>
 
 		<dependency>
-		    <groupId>org.apache.kafka</groupId>
-			<artifactId>kafka-clients</artifactId>
-		</dependency>		
+			<groupId>org.apache.activemq</groupId>
+ 			<artifactId>activemq-client</artifactId>
+			<version>${activemq.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+ 			<artifactId>activemq-broker</artifactId>
+			<version>${activemq.version}</version>
+		</dependency>
+		
 	</dependencies>
 
 </project>

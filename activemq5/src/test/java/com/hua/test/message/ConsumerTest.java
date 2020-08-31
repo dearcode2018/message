@@ -1,11 +1,11 @@
 /**
  * 描述: 
- * PublisherTest.java
+ * ConsumerTest.java
  * 
  * @author qye.zheng
  *  version 1.0
  */
-package com.hua.test.jms;
+package com.hua.test.message;
 
 // 静态导入
 import static org.junit.Assert.assertArrayEquals;
@@ -23,7 +23,8 @@ import static org.junit.Assert.fail;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import com.hua.message.Publisher;
+import com.hua.message.ActiveMessageListener;
+import com.hua.message.Consumer;
 import com.hua.test.BaseTest;
 
 
@@ -31,18 +32,14 @@ import com.hua.test.BaseTest;
  * 描述: 
  * 
  * @author qye.zheng
- * PublisherTest
+ * ConsumerTest
  */
-public final class PublisherTest extends BaseTest {
+public final class ConsumerTest extends BaseTest {
 
 	/**
 	 * 先启动 ConsumerTest.testConsumer
 	 * 再启动 PublisherTest.testPublisher
 	 */
-	
-	protected static int count = 10;
-	
-	protected static int total;
 	
 	/**
 	 * 
@@ -51,16 +48,13 @@ public final class PublisherTest extends BaseTest {
 	 * 
 	 */
 	@Test
-	public void testPublisher() {
+	public void testConsumer() {
 		try {
-			Publisher publisher = new Publisher(QUEUE_NAME);  
-			
-			publisher.send("hi, i am message producer. 哈哈");
-			
-	        publisher.close();  
-			
+		       Consumer consumer = new Consumer(QUEUE_NAME, new ActiveMessageListener());  
+		       Thread.sleep(10 * 1000);
+		       consumer.close();
 		} catch (Exception e) {
-			log.error("testPublisher =====> ", e);
+			log.error("testConsumer =====> ", e);
 		}
 	}
 	

@@ -11,7 +11,6 @@ admin应用，进入Mange ActiveMQ broker需要输入管理帐号.
 http://127.0.0.1:8161
 
 Linux环境使用
-cd $ACTIVEMQ_HOME/bin
 1.启动/停止 守护(后台)进程
 activemq.sh start
 activemq.sh stop

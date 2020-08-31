@@ -11,7 +11,8 @@
 	<modules>
 		<!-- 模板 -->
 		<module>message-template</module>
-		<module>activemq</module>		
+		<module>activemq</module>
+		<module>activemq-broker</module>		
 		<module>activemq5</module>		
 		<module>activemq-spring</module>
 		<module>kafka-core</module>
@@ -35,9 +36,11 @@
 		<maven.plugin.resources.version>2.7</maven.plugin.resources.version>
 		<maven.plugin.dependency.version>2.10</maven.plugin.dependency.version>
 		<maven.plugin.war.version>3.0</maven.plugin.war.version>
-		<activemq.version>5.15.4</activemq.version>		
+		<activemq.version>5.15.8</activemq.version>		
 		<spring.version>5.0.8.RELEASE</spring.version>
-		<javax.jms.version>2.0.1</javax.jms.version>				
+		<javax.jms.version>2.0.1</javax.jms.version>	
+		<kafka.client.version>2.6.0</kafka.client.version>		
+		<common.version>0.0.1</common.version>			
 	</properties>  
   
   
@@ -142,6 +145,22 @@
 		</plugins>
 	</build>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+			    <groupId>org.apache.kafka</groupId>
+			    <artifactId>kafka-clients</artifactId>
+			    <version>${kafka.client.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.hua</groupId>
+				<artifactId>common</artifactId>
+				<version>${common.version}</version>
+			</dependency>			
+		</dependencies>
+	</dependencyManagement>
+	
 	<dependencies>
 	
 		<!-- jms -->
@@ -152,5 +171,6 @@
 		</dependency>	
 			
 	</dependencies>
+	
 	
 </project>

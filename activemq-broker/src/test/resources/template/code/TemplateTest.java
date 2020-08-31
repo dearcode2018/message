@@ -1,11 +1,11 @@
 /**
  * 描述: 
- * JMSTest.java
+ * TemplateTest.java
  * 
  * @author qye.zheng
  *  version 1.0
  */
-package com.hua.test.jms;
+package template.code;
 
 // 静态导入
 import static org.junit.Assert.assertArrayEquals;
@@ -20,8 +20,6 @@ import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
-import javax.jms.ConnectionFactory;
-
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -29,12 +27,12 @@ import com.hua.test.BaseTest;
 
 
 /**
- * 描述: Java Message Service - 测试
+ * 描述: 
  * 
  * @author qye.zheng
- * JMSTest
+ * TemplateTest
  */
-public final class JMSTest extends BaseTest {
+public final class TemplateTest extends BaseTest {
 
 	/**
 	 * 
@@ -45,25 +43,10 @@ public final class JMSTest extends BaseTest {
 	@Test
 	public void test() {
 		try {
-		
+			
+			
 		} catch (Exception e) {
 			log.error("test =====> ", e);
-		}
-	}
-	
-	/**
-	 * 
-	 * 描述: 
-	 * @author qye.zheng
-	 * 
-	 */
-	@Test
-	public void testJMS() {
-		try {
-			
-			
-		} catch (Exception e) {
-			log.error("testJMS =====> ", e);
 		}
 	}
 	
