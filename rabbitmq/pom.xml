@@ -14,7 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		
 		<message.core.version>0.0.1</message.core.version>
-		<rabbitmq.version>5.2.0</rabbitmq.version>		
+		<rabbitmq.version>5.4.0</rabbitmq.version>		
 	</properties>
 
 	<dependencies>
