@@ -43,7 +43,8 @@ bin\windows\kafka-console-producer.bat --broker-list 127.0.0.1:2181 --topic [top
 
 
 
-
+############################################################
+1) isr: in sync replica 同步的复制节点
 
 
 

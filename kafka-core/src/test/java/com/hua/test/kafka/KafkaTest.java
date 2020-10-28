@@ -251,7 +251,6 @@ public final class KafkaTest extends BaseTest {
 	public void testTemp() {
 		try {
 			
-			
 		} catch (Exception e) {
 			log.error("testTemp=====> ", e);
 		}
