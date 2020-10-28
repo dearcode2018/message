@@ -2,7 +2,7 @@
 
 一、基本知识
 kafka版本自带zookeeper
-
+	
 二、windows环境下使用
 cd %KAFKA_HOME%
 1. 启动zookeeper
